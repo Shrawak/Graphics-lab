@@ -4,7 +4,7 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
-from midpoint import midpoint_circle
+from midpoint import midpoint
 
 window = 0  
 width, height = 500, 500
@@ -41,7 +41,7 @@ def draw():
     glLoadIdentity() 
     refresh2d(width, height)  
     glColor3f(0.0, 1.0, 0.0) 
-    midpoint_circle(center, radius)
+    midpoint(center, radius)
     pie_chart()
     glutSwapBuffers()
    
