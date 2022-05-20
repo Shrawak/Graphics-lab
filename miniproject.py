@@ -20,9 +20,7 @@ c = 1.0
 pos = [ 0.0, 0.0, -10.0, 1.0 ]
 white = [ 0,0,0, 0 ]
 red= [0.7, 0.4, 0.0, 1.0 ]
-deep_blue= [ 0.3, 0.3, 0.9, 1.0 ]
 shiny= [ 50.0 ]
-dull= [ 0.0 ]
 Cylinder = GLUquadricObj()
 class Axis(Enum):
     X = 0
