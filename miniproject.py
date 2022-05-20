@@ -226,7 +226,7 @@ def main ():
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH)
     glutInitWindowSize(SIZE, SIZE)
     glutInitWindowPosition(1000, 100)
-    glutCreateWindow("SIMULATION OF WINDMILL")
+    glutCreateWindow("SIMULATION OF 3D WINDMILL")
     glutIdleFunc(spin)
     glutDisplayFunc(display)
     glutSpecialFunc(special)
