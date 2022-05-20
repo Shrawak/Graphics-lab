@@ -5,7 +5,7 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
-vertices = [[110,100],[-120,130],[90,70]]
+vertices = [[10,10],[120,10],[55,75]]
 
 class Transformation:
     def __init__(self, vertex_matrix):
@@ -79,41 +79,41 @@ def draw_polygon():
 def transform():
     glColor3f(0.8,0.3,0.5)
     glPointSize(2.0)
-    result = Transformation(vertices).rotation(180)
+    # result = Transformation(vertices).rotation(180)
+    # glBegin(GL_POLYGON)
+    # for vertex in result:
+    #     glVertex2f(vertex[0],vertex[1])
+    # glEnd()
+    # result = Transformation(vertices).reflection_xaxis()
+    # glBegin(GL_POLYGON)
+    # for vertex in result:
+    #     glVertex2f(vertex[0],vertex[1])
+    # glEnd()
+    # result = Transformation(vertices).reflection_yaxis()
+    # glBegin(GL_POLYGON)
+    # for vertex in result:
+    #     glVertex2f(vertex[0],vertex[1])
+    # glEnd()
+    # result = Transformation(vertices).translation(5,5)
+    # glBegin(GL_POLYGON)
+    # for vertex in result:
+    #     glVertex2f(vertex[0],vertex[1])
+    # glEnd()
+    result = Transformation(vertices).scaling(1.25,1.25)
     glBegin(GL_POLYGON)
     for vertex in result:
         glVertex2f(vertex[0],vertex[1])
     glEnd()
-    result = Transformation(vertices).reflection_xaxis()
-    glBegin(GL_POLYGON)
-    for vertex in result:
-        glVertex2f(vertex[0],vertex[1])
-    glEnd()
-    result = Transformation(vertices).reflection_yaxis()
-    glBegin(GL_POLYGON)
-    for vertex in result:
-        glVertex2f(vertex[0],vertex[1])
-    glEnd()
-    result = Transformation(vertices).translation(5,5)
-    glBegin(GL_POLYGON)
-    for vertex in result:
-        glVertex2f(vertex[0],vertex[1])
-    glEnd()
-    result = Transformation(vertices).scaling(1,-1)
-    glBegin(GL_POLYGON)
-    for vertex in result:
-        glVertex2f(vertex[0],vertex[1])
-    glEnd()
-    result = Transformation(vertices).shearing_yaxis(1.2)
-    glBegin(GL_POLYGON)
-    for vertex in result:
-        glVertex2f(vertex[0],vertex[1])
-    glEnd()
-    result = Transformation(vertices).shearing_xaxis(1.2)
-    glBegin(GL_POLYGON)
-    for vertex in result:
-        glVertex2f(vertex[0],vertex[1])
-    glEnd()
+    # result = Transformation(vertices).shearing_yaxis(1.1)
+    # glBegin(GL_POLYGON)
+    # for vertex in result:
+    #     glVertex2f(vertex[0],vertex[1])
+    # glEnd()
+    # result = Transformation(vertices).shearing_xaxis(1.1)
+    # glBegin(GL_POLYGON)
+    # for vertex in result:
+    #     glVertex2f(vertex[0],vertex[1])
+    # glEnd()
     glFlush()
 
 
